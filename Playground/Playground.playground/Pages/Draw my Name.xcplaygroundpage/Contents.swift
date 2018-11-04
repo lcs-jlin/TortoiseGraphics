@@ -3,7 +3,7 @@ import TortoiseGraphics
 import CoreGraphics
 let myFrame = CGRect(x: 0, y: 0, width: 800, height: 600)
 let canvas = PlaygroundCanvas(frame: myFrame)
-canvas.frameRate = 30
+canvas.frameRate = 150
 canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
@@ -16,7 +16,7 @@ canvas.drawing { t in
     // J
     t.heading
     t.ycor
-    //t.uppercaseJ()
+    t.uppercaseJ()
     t.heading
     t.ycor
 
@@ -27,13 +27,37 @@ canvas.drawing { t in
     
     // S
     t.ycor
-   t.lowercaseS()
+    t.lowercaseS()
     t.ycor
     
     // T
-    t.curve(withSides: -30, withSize: 2, drawSides: 2)
-    t.curve(withSides: -50, withSize: 2, drawSides: 10)
-    t.curve(withSides: -250, withSize: 5, drawSides: 15)
-    t.curve(withSides: -15, withSize: 2, drawSides: 8)
-    t.curve(withSides: -270, withSize: 5, drawSides: 15)
+    t.lowercaseT()
+  
+    
+    // Y
+    t.lowercaseY()
+   
+    
+    // L
+   t.uppercaseL()
+    
+    // I
+    t.lowercaseI()
+   
+    // N
+    t.lowercaseN()
+    
+    // Line of T Dot of I
+    t.penUp()
+    t.forward(45)
+    t.left(75)
+    t.forward(80)
+    t.penDown()
+    t.forward(7)
+    t.penUp()
+    t.forward(200)
+    t.penDown()
+    t.forward(70)
+    
+    
 }
