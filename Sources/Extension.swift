@@ -1,7 +1,7 @@
 public extension Tortoise {
-
+    
     func square(withSize size: Double) {
-
+        
         // "self" refers to anyinstance of the
         // Tortoise calss
         self.penDown()
@@ -11,30 +11,30 @@ public extension Tortoise {
         }
         self.penUp()
     }
-
+    
     func curve(withSides sideCount: Int, withSize size: Double, drawSides sideLimit: Int) {
         self.penDown()
         for _ in 1...sideLimit {
             self.forward(size)
             self.right(360/Double (sideCount))
         }
-
+        
     }
-
-    func uppercaseJ() {
+    
+    func uppercaseJ(scaleFactor scale: Double = 1.0) {
         // NEW: Make turtle face to right like in GP Blocks
         self.setHeading(270)
-
+        
         // Starting tail
-        self.curve(withSides: 95, withSize: 5, drawSides: 20)
-        self.curve(withSides: 95, withSize: 5, drawSides: 24)
-        self.curve(withSides: 55, withSize: 2, drawSides: 15)
-        self.curve(withSides: 500, withSize: 5, drawSides: 43)
-        self.curve(withSides: 27, withSize: 5, drawSides: 15)
-        self.curve(withSides: 500, withSize: 9, drawSides: 9)
+        self.curve(withSides: 95, withSize: 5 * scale, drawSides: 20)
+        self.curve(withSides: 95, withSize: 5  * scale, drawSides: 24)
+        self.curve(withSides: 55, withSize: 2  * scale, drawSides: 15)
+        self.curve(withSides: 500, withSize: 5  * scale, drawSides: 43)
+        self.curve(withSides: 27, withSize: 5  * scale, drawSides: 15)
+        self.curve(withSides: 500, withSize: 9  * scale, drawSides: 9)
         self.setH(90)
     }
-
+    
     func lowercaseU() {
         // U
         self.setH(52.35)
@@ -48,7 +48,7 @@ public extension Tortoise {
         self.curve(withSides: -20, withSize: 2, drawSides: 9)
         self.setH(25)
     }
-
+    
     func lowercaseS() {
         // S
         self.curve(withSides: -90, withSize: 3, drawSides: 11)
@@ -59,7 +59,7 @@ public extension Tortoise {
         self.curve(withSides: 15, withSize: 2, drawSides: 5)
         self.curve(withSides: 170, withSize: 3, drawSides: 8)
     }
-
+    
     func lowercaseT() {
         // T
         self.curve(withSides: -30, withSize: 2, drawSides: 2)
@@ -69,9 +69,9 @@ public extension Tortoise {
         self.curve(withSides: -270, withSize: 8, drawSides: 16)
         self.curve(withSides: -25, withSize: 2, drawSides: 8)
     }
-
+    
     func lowercaseY() {
-
+        
         self.curve(withSides: -40, withSize: 5, drawSides: 6)
         self.setH(550)
         self.curve(withSides: -15, withSize: 5, drawSides: 9)
@@ -88,7 +88,7 @@ public extension Tortoise {
         self.curve(withSides: 180, withSize: 8, drawSides: 7)
         self.curve(withSides: -30, withSize: 8, drawSides: 3)
     }
-
+    
     func lowercaseI() {
         self.curve(withSides: -40, withSize: 3, drawSides: 7)
         self.curve(withSides: -60, withSize: 4, drawSides: 6)
@@ -107,8 +107,7 @@ public extension Tortoise {
         self.curve(withSides: 20, withSize: 4, drawSides: 8)
         self.curve(withSides: 180, withSize: 4, drawSides: 9)
         self.curve(withSides: -15, withSize: 4, drawSides: 8)
-
+        
     }
-    
     
 }
