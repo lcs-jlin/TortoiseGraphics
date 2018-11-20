@@ -7,7 +7,8 @@ canvas.frameRate = 300
 canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
-canvas.drawing { turtle in 
+canvas.drawing { turtle in
+    turtle.penColor(.blueGrey)
     for _ in 1...9 {
         turtle.right(40)
     for _ in 1...9 {
@@ -31,4 +32,5 @@ canvas.drawing { turtle in
         }
     }
     }
+    turtle.hideTortoise()
 }
